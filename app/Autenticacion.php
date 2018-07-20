@@ -14,7 +14,12 @@ class Autenticacion extends Model
      * @var array
      */
     protected $fillable = [
-        'file',
+        'version',
+        'folioDigital',
+        'fechaAutenticacion',
+        'selloTitulo',
+        'noCertificadoAutoridad',
+        'selloAutenticacion',
     ];
 
     /**

@@ -15,7 +15,13 @@ class CreateAutenticacionesTable extends Migration
     {
         Schema::create('autenticaciones', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('file');
+            $table->unsignedDecimal('version',2,1)->default(1.0);
+            $table->string('folioDigital');
+            $table->timestamp('fechaAutenticacion')->nullable();
+            $table->string('selloTitulo');
+            $table->string('noCertificadoAutoridad');
+            $table->string('selloAutenticacion');
+
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
             $table->engine = 'InnoDB';
