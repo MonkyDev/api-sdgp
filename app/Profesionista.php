@@ -19,6 +19,8 @@ class Profesionista extends Model
         'primerApellido',
         'segundoApellido',
         'correoElectronico',
+        'fechaInicio',
+        'fechaTerminacion',
         'edo',
     ];
 
@@ -28,11 +30,21 @@ class Profesionista extends Model
      * @var array
      */
     protected $hidden = [
-        'created_at', 'updated_at',
+        'carrera_id', 'antecedente_id', 'created_at', 'updated_at',
     ];
 
     public function Titulos()
     {
         return $this->hasMany('App\Titulo');
+    }
+
+    public function carrera()
+    {
+        return $this->belongsTo('App\Carrera');
+    }
+
+    public function antecedente()
+    {
+        return $this->belongsTo('App\Antecedente');
     }
 }

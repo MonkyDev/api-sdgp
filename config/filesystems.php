@@ -54,6 +54,34 @@ return [
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],
+        /*se crea un disco hacia la ruta de la carpeta*/
+        'images' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/images/salazar'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+
+        'icons' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/icons'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+
+        'key' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/signer/keys'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'private',
+        ],
+
+        'certify' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/signer/certifys'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'private',
+        ],
 
         's3' => [
             'driver' => 's3',

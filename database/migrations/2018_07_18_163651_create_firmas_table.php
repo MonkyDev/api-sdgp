@@ -18,7 +18,7 @@ class CreateFirmasTable extends Migration
             $table->string('nombre');
             $table->string('primerApellido');
             $table->string('segundoApellido');
-            $table->char('curp', 18)->unique();
+            $table->char('curp', 20)->unique();
             $table->char('abrTitulo', 20)->nullable();
 
             $table->timestamp('created_at')->useCurrent();

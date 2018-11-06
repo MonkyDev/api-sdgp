@@ -40,8 +40,8 @@ class Antecedente extends Model
     	return $this->belongsTo('App\Nivel');
     }
 
-    public function Titulos()
+    public function profesionistas()
     {
-        return $this->hasMany('App\Titulo');
+        return $this->hasMany('App\Profesionista');
     }
 }

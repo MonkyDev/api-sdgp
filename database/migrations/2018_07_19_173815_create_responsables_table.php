@@ -17,9 +17,10 @@ class CreateResponsablesTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('firma_id');
             $table->unsignedInteger('cargo_id');
-            $table->text('sello');
-            $table->string('certificadoResponsable');
-            $table->string('noCertificadoResponsable');
+            $table->string('numeracion');
+            $table->text('certificado');
+            $table->text('llave');
+            $table->string('firma');
 
             $table->unsignedTinyInteger('edo')->default(1);
             $table->timestamp('created_at')->useCurrent();

@@ -14,9 +14,10 @@ class Responsable extends Model
      * @var array
      */
     protected $fillable = [
-		'sello',
-		'certificadoResponsable',
-		'noCertificadoResponsable',
+		'numeracion',
+		'certificado',
+        'llave',
+		'firma',
 		'edo',
     ];
 

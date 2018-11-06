@@ -18,9 +18,9 @@ class Carrera extends Model
 		'nombreCarrera',
 		'modalidad',
 		'nivel',
-		'fechaInicio',
-		'fechaTerminacion',
 		'noRevoe',
+        'autorizacion_id',
+        'institucion_id',
     ];
 
     /**
@@ -29,8 +29,6 @@ class Carrera extends Model
      * @var array
      */
     protected $hidden = [
-    	'autorizacion_id',
-		'institucion_id',
         'created_at',
         'updated_at',
     ];
@@ -48,8 +46,8 @@ class Carrera extends Model
     	return $this->belongsTo('App\Institucion');
     }
 
-    public function Titulos()
+    public function profesionistas()
     {
-        return $this->hasMany('App\Titulo');
+        return $this->hasMany('App\Profesionista');
     }
 }

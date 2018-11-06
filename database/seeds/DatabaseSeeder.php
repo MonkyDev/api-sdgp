@@ -19,5 +19,6 @@ class DatabaseSeeder extends Seeder
         $this->call(ModalidadesTableSeeder::class);
         $this->call(NivelesTableSeeder::class);
         $this->call(CarrerasTableSeeder::class);
+        $this->call(PermissionsTableSeeder::class);
     }
 }
